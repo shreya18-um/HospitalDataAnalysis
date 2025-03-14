@@ -1,0 +1,13 @@
+[project]
+title = "Hospital Data Analysis Dashboard"
+version = "1.0"
+port = 8501
+slug = "hospital-analysis"
+entrypoint = "hello.py"
+
+[data.hospital_data]
+type = "csv"
+path = "dataset/HospInfo_reduced.csv"
+
+[build]
+exclude = ["dataset/", "HospInfo.csv", "HospInfo.zip", "venv/"]
