@@ -4,7 +4,7 @@ import plotly.express as px
 import os
 
 # Step 1: Define the dataset path manually
-dataset_path = "C:/Users/MacBook Pro/Desktop/HospitalDataAnalysis/dataset/HospInfo.csv"
+dataset_path = "C:/Users/MacBook Pro/Desktop/HospitalDataAnalysis/dataset/HospInfo_red.csv"
 
 # Step 2: Load the dataset manually
 if os.path.exists(dataset_path):
