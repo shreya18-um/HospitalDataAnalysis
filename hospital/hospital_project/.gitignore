@@ -1,10 +1,11 @@
 secrets.toml
 .preswald_deploy
 .env.structured
-# Ignore virtual environment and datasets
+# Ignore virtual environment and unnecessary files
 venv/
 __pycache__/
-dataset/
 *.csv
 *.zip
 *.log
+data/
+
