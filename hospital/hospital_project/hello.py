@@ -1,17 +1,22 @@
 from preswald import text, plotly, table, slider, text_input
 import pandas as pd
 import plotly.express as px
-import os
+import requests
 
-# Step 1: Define the dataset path manually
-dataset_path = "C:/Users/MacBook Pro/hospital/hospital_project/data/HospInfo_minimized.csv"
-#C:\Users\MacBook Pro\hospital\hospital_project\data
+# Step 1: Define the Google Drive File ID and Download URL
+file_id = "16FrZkopfHiWFe1KXvU6ECZSbvMFjCF_U"  # Update this if needed
+dataset_url = f"https://drive.google.com/uc?id={file_id}"
+dataset_path = "HospInfo.csv"  # Local filename after download
 
-# Step 2: Load the dataset manually
-if os.path.exists(dataset_path):
+# Step 2: Download the dataset if it doesn't exist
+try:
+    response = requests.get(dataset_url)
+    response.raise_for_status()  # Raise error if request fails
+    with open(dataset_path, "wb") as f:
+        f.write(response.content)
     df = pd.read_csv(dataset_path)
-else:
-    text("❌ Error: Dataset not found at " + dataset_path)
+except Exception as e:
+    text(f"❌ Error: Unable to load dataset. {str(e)}")
     df = None
 
 if df is not None:
