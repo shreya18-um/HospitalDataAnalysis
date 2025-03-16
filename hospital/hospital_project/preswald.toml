@@ -1,9 +1,10 @@
 [project]
-title = "Hospital Data Analysis"
+title = "Hospital Data Analysis Dashboard"
 version = "1.0"
 port = 8501
 slug = "hospital-analysis"
 entrypoint = "hello.py"
 
-][build]
-exclude = ["dataset/", "data/HospInfo.csv", "data/HospInfo.zip", "venv/"]
+[build]
+exclude = ["data/", "venv/", "__pycache__/", ".git/", "*.log"]
+
