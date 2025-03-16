@@ -4,13 +4,17 @@ import plotly.express as px
 import os
 
 # Step 1: Define the dataset path manually
-dataset_path = os.path.join(os.getcwd(), "data", "HospInfo_red.csv")
+dataset_path = "C:/Users/MacBook Pro/hospital/hospital_project/data/HospInfo_reduced.csv"
+
+
+
+
 
 # Step 2: Load the dataset manually
 if os.path.exists(dataset_path):
     df = pd.read_csv(dataset_path)
 else:
-    text(f"❌ Error: Dataset not found at {dataset_path}")
+    text("❌ Error: Dataset not found at " + dataset_path)
     df = None
 
 if df is not None:
