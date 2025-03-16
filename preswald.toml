@@ -5,9 +5,5 @@ port = 8501
 slug = "hospital-analysis"
 entrypoint = "hello.py"
 
-[data.hospital_data]
-type = "csv"
-path = "dataset/HospInfo_reduced.csv"
-
 [build]
-exclude = ["dataset/", "HospInfo.csv", "HospInfo.zip", "venv/"]
+exclude = ["dataset/", "HospInfo.csv", "HospInfo.zip"]
