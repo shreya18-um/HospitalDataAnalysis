@@ -10,3 +10,8 @@ __pycache__/
 
 # Ignore all CSV files inside data/
 data/*.csv
+# Ignore dataset files
+data/HospInfo.csv
+data/HospInfo_final.csv
+data/HospInfo_reduced.csv
+"HospInfo.csv" 
